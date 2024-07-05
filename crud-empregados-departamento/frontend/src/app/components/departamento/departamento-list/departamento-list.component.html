@@ -1,0 +1,9 @@
+<h2>Departamentos</h2>
+<a routerLink="/departamentos/create">Criar Departamento</a>
+<ul>
+    <li *ngFor="let departamento of departamentos">
+        {{ departamento.nome }}
+        <a [routerLink]="['/departamentos', departamento.id]">Detalhes</a>
+        <button (click)="deleteDepartamento(departamento.id)">Deletar</button>
+    </li>
+</ul>

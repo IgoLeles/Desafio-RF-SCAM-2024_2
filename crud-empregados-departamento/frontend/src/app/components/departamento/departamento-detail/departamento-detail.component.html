@@ -1,0 +1,9 @@
+<!-- frontend/src/app/components/departamento/departamento-detail/departamento-detail.component.html -->
+<h2>Detalhes do Departamento</h2>
+<form (ngSubmit)="updateDepartamento()">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" [(ngModel)]="departamento.nome" name="nome">
+    </div>
+    <button type="submit">Atualizar</button>
+</form>

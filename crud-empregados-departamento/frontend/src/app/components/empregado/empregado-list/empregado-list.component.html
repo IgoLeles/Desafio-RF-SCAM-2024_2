@@ -1,0 +1,9 @@
+<h2>Empregados</h2>
+<a routerLink="/empregados/create">Criar Empregado</a>
+<ul>
+  <li *ngFor="let empregado of empregados">
+    {{ empregado.nome }} - {{ empregado.email }} - {{ empregado.cargo }}
+    <a [routerLink]="['/empregados', empregado.id]">Detalhes</a>
+    <button (click)="deleteEmpregado(empregado.id)">Deletar</button>
+  </li>
+</ul>
